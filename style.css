@@ -1,0 +1,467 @@
+@import url("https://fonts.googleapis.com/css2?family=Strait&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Strait&display=swap");
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Strait", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+section{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.container {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0px auto;
+}
+.top-header {
+  background-color: #e8f4fa;
+}
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 15px 0px 15px;
+}
+.phone-num {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+a.info-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+}
+a.info-icon i {
+  color: #1a4d8f;
+}
+a.info-icon span {
+  color: #1a4d8f;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.social-icons i {
+  color: #1a4d8f;
+}
+/* Basic styling */
+.main-header {
+  background-color: #fff;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+ul.menu {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+ul.menu li {
+  list-style: none;
+}
+ul.menu li a {
+  color: #1a4d8f;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+}
+.registration-btn {
+  display: flex;
+  align-items: center;
+}
+a.header-btn {
+  background-color: #1a4d8f;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+/* Show the menu when hamburger is clicked */
+.show-menu {
+  display: flex !important;
+}#hamburger{
+  display: none;
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .header {
+    text-align: center;
+    padding: 0px;
+  }
+  #hamburger{
+    display: block;
+  }
+
+  ul.menu {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    position: absolute;
+    top: 17%;
+    left: 0px;
+    z-index: 99;
+    background: #000;
+    width: 100%;
+    padding: 20px;
+    color: #fff;
+  }
+  ul.menu li a{
+    color: #fff;
+  }
+
+  .registration-btn {
+    margin-top: 15px;
+  }
+
+  a.header-btn {
+    padding: 12px 25px;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  .registration-btn{
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  ul.menu li a {
+    font-size: 18px;
+  }
+  a.header-btn {
+    padding: 10px 15px;
+  }
+  .registration-btn{
+    display: none;
+  }
+}
+
+.hero-section {
+  background-image: url("/image/Untitled\ (1200\ x\ 500\ px)\ (1).png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.hero-section::after {
+  content: "";
+  background-color: #000;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  opacity: 35%;
+}
+.hero-content {
+  text-align: center;
+}
+
+.hero-heading {
+  text-align: center;
+}
+.hero-heading h1 {
+  color: #fff;
+  font-size: 60px;
+  font-weight: 900;
+  position: relative;
+  z-index: 1;
+}
+.animated-text {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: bold;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideIn 1.5s forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-heading p {
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 17px;
+  position: relative;
+  z-index: 1;
+}
+
+button {
+  margin-top: 20px;
+}
+
+button a {
+  text-decoration: none;
+  color: white;
+}
+.hero-btn {
+  background-color: #1a4d8f;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+.heri-button {
+  position: fixed;
+  bottom: 20px; /* Adjust the bottom distance */
+  left: 50%; /* Position the button in the center horizontally */
+  transform: translateX(-50%);
+  z-index: 99;
+}
+.about-content {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.image-about {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-about {
+  width: 100%;
+  height: auto;
+}
+.about-txt-content h2 {
+  font-size: 31px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.about-txt-content p {
+  text-align: justify;
+  font-size: 16px;
+  color: #000;
+  line-height: 25px;
+}
+
+
+.services {
+  background: #ffffff;
+  padding: 40px 20px;
+  text-align: center;
+}
+.services h3 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+.services .service-item {
+  display: inline-block;
+  width: 45%;
+  margin: 10px;
+  padding: 20px;
+  background: #1a4d8f;
+  border-radius: 8px;
+  text-align: center;
+}
+.services .service-item i {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.services .service-item h5 {
+  font-size: 1.3rem;
+  margin-top: 10px;
+  color: #fff;
+}
+
+
+.form-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  margin-bottom: 30px;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+}
+input[type="text"], input[type="email"], input[type="tel"], input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #5c67f2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+button:hover {
+  background-color: #4e54e2;
+}
+.contact-details{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+.address {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  margin-bottom: 25px;
+}
+a.c-info-icon {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+}
+a.c-info-icon i {
+  color: #1a4d8f;
+}
+a.c-info-icon span {
+  color: #1a4d8f;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 40px 0;
+  font-family: Arial, sans-serif;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  padding: 10px;
+}
+
+.footer-section h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer-section p,
+.footer-section a {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #bdc3c7;
+  text-decoration: none;
+  display: block;
+}
+
+.footer-section a:hover {
+  color: #ecf0f1;
+}
+
+.footer-bottom {
+  text-align: center;
+  background-color: #34495e;
+  padding: 15px 0;
+  font-size: 14px;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .footer-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .footer-section {
+      min-width: 100%;
+      text-align: center;
+  }
+}
+
+
+@media (min-width:240px) and (max-width:479px){
+  .about-content {
+    display: block;
+}
+ .contact-details {
+  display: block;
+}
+.form-container {
+  width: 330px;
+}
+.address{
+  display: block;
+}
+.top-header{
+  display: none;
+}
+}
